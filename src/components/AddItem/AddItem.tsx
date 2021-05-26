@@ -24,7 +24,7 @@ export const AddItem: FC<{}> = ({ ...props }) => {
 	return (
 		<form className={styles.Form} onSubmit={onSubmit} {...props}> 
 			<TextField className={styles.Input} value={input} onChange={(event) => setInput(event.target.value)} label="Task" variant="outlined" />
-			<Button className={styles.Button} variant="contained" type="submit" color="primary">Add</Button>
+			<Button className={styles.Button} variant="contained" type="submit" color="primary">Add to-do</Button>
 		</form> 
 	);
 };
