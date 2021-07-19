@@ -6,3 +6,4 @@ A simple to-do list made with Angular, Typescript and Sass.
 
 ### How to run the project
 - npm i
+- ng serve
