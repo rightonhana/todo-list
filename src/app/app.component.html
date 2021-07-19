@@ -1,0 +1,6 @@
+<div class="container">
+	<ul *ngFor="let task of tasks; index as i;" class="list">
+		<app-item [task]="task.task" [done]="task.done" [id]="task.id" (changeDone)="updateTask($event)" remove="removeTask($event)"></app-item>
+	</ul>
+	<app-add-item (taskChange)="addTask($event)"></app-add-item>
+</div>

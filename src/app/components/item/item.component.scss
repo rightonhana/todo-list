@@ -1,0 +1,14 @@
+.item {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	list-style: none;
+
+	.checkbox, .remove {
+		margin: 0 1rem;
+	}
+	.task{
+		width: 100%;
+	}
+}
