@@ -5,16 +5,15 @@ import styles from "./Items.module.css";
 
 export const Items: FC<ItemsProps> = ({ items }) => (
 	<ul className={styles.TodoList}>
-		{items.map((item, index) => (
+		{items.map(({value, done, id}) => (
 			<Item
-				key={index}
-				value={item.value}
-				done={item.done}
-				id={item.id}
+				key={id}
+				value={value}
+				done={done}
+				id={id}
 			/>
 		))}
 	</ul>
 );
-//{...item}
 
 export default Items;
