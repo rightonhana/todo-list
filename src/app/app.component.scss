@@ -3,11 +3,12 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 100vw;
-	height: 100vh;
+	max-width: 100vw;
+	min-height: 100vh;
 
 	.list {
 		margin: 2rem 0;
 		list-style: none;
+		min-height: 80vh;
 	}
 }
