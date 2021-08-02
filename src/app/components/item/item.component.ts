@@ -13,7 +13,6 @@ export class ItemComponent {
 	@Output() public readonly remove = new EventEmitter<number>();
 
 	public changeHandler(event: any) {
-		event.preventDefault();
 		this.changeDone.emit(this.id);
 	}
 

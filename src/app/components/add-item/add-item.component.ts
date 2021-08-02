@@ -10,8 +10,10 @@ export class AddItemComponent {
 	@Output() public readonly taskChange = new EventEmitter<string>();
 
 	public onSubmit(event: Event) {
-		event.preventDefault();
-		this.taskChange.emit(this.task);
-		this.task = "";
+		if (this.task !== "") {
+			event.preventDefault();
+			this.taskChange.emit(this.task);
+			this.task = "";
+		}
 	}
 }

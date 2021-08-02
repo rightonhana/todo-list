@@ -1,5 +1,4 @@
-<li class="item" *ngIf="task">
-	<input class="checkbox" type="checkbox" [checked]="done" (change)="changeHandler($event)"/>
-	<p class="task" [ngClass]="{'task-done': done}">{{task}}</p>
-	<button class="remove" (click)="removeHandler($event)">x</button>
-</li>
+<div class="item" *ngIf="task">
+	<mat-checkbox class="checkbox" [checked]="done" (change)="changeHandler($event)" [ngClass]="{'task-done': done}" color="primary">{{task}}</mat-checkbox>
+	<button class="remove" (click)="removeHandler($event)" mat-button>x</button>
+</div>
