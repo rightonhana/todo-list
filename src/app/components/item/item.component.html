@@ -1,4 +1,4 @@
-<li class="item" *ngIf="task && done">
+<li class="item" *ngIf="task">
 	<input class="checkbox" type="checkbox" [checked]="done" (change)="changeHandler($event)"/>
 	<p class="task">{{task}}</p>
 	<button class="remove" (click)="removeHandler($event)">x</button>
