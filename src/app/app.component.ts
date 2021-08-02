@@ -25,8 +25,8 @@ export class AppComponent implements OnInit {
 		});
 	}
 
-	public updateTask(id: number) {
-		this.todoList.updateTask(id);
+	public updateTask(task: {id: number, done: boolean}) {
+		this.todoList.updateTask(task.id, task.done);
 	}
 
 	public removeTask(id: number) {

@@ -17,7 +17,7 @@ export class TaskServiceService {
 		this.list.next([...currentList, task]);
 	}
 
-	public updateTask(id: number) {
+	public updateTask(id: number, done: boolean) {
 		const currentList =  this.list.getValue();
 		const toDo = currentList.find(toDo => toDo.id === id);
 		const index = currentList.findIndex(toDo => toDo.id === id);
@@ -26,7 +26,7 @@ export class TaskServiceService {
 				...currentList.splice(0, index),
 				{
 					...toDo,
-					done: !toDo?.done
+					done: done
 				},
 				...currentList.splice(index + 1)
 			]

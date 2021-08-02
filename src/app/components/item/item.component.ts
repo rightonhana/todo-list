@@ -9,11 +9,11 @@ export class ItemComponent {
 	@Input() public task: string;
 	@Input() public done: boolean;
 	@Input() public id: number;
-	@Output() public readonly changeDone = new EventEmitter<number>();
+	@Output() public readonly changeDone = new EventEmitter<{id: number, done: boolean}>();
 	@Output() public readonly remove = new EventEmitter<number>();
 
-	public changeHandler(event: any) {
-		this.changeDone.emit(this.id);
+	public changeHandler(complete: boolean) {
+		this.changeDone.emit({id: this.id, done: complete});
 	}
 
 	public removeHandler(event: any) {
