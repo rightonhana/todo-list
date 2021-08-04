@@ -23,12 +23,12 @@ export class TaskServiceService {
 		const index = currentList.findIndex(toDo => toDo.id === id);
 		const updatedList = toDo && index > -1
 			? [
-				...currentList.splice(0, index),
+				...currentList.slice(0, index),
 				{
 					...toDo,
 					done: done
 				},
-				...currentList.splice(index + 1)
+				...currentList.slice(index + 1)
 			]
 			: currentList;
 		this.list.next(updatedList);
