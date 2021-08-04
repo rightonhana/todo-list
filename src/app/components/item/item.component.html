@@ -1,4 +1,4 @@
 <div class="item" *ngIf="task">
-	<mat-checkbox class="checkbox" [checked]="done" (change)="changeHandler($event.checked)" [ngClass]="{'task-done': done}" color="primary">{{task}}-{{id}}</mat-checkbox>
+	<mat-checkbox class="checkbox" [checked]="done" (change)="changeHandler($event)" [ngClass]="{'task-done': done}" color="primary">{{task}}</mat-checkbox>
 	<button class="remove" (click)="removeHandler($event)" mat-button>x</button>
 </div>

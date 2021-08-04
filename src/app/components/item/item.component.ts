@@ -12,8 +12,8 @@ export class ItemComponent {
 	@Output() public readonly changeDone = new EventEmitter<{id: number, done: boolean}>();
 	@Output() public readonly remove = new EventEmitter<number>();
 
-	public changeHandler(complete: boolean) {
-		this.changeDone.emit({id: this.id, done: complete});
+	public changeHandler(event: any) {
+		this.changeDone.emit({id: this.id, done: event.checked});
 	}
 
 	public removeHandler(event: any) {
